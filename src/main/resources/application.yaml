@@ -1,0 +1,27 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:5433/dcbapp
+    password: P@$$W0rd1
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: tru
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
+
+welcome:
+  message: Welcome to my website
+
+
+
